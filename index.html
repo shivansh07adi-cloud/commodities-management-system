@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commodities Management System</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="container">
+    <h2>🔐 Login</h2>
+    <input type="email" id="email" placeholder="Enter Email">
+    <select id="role">
+        <option value="Manager">Manager</option>
+        <option value="StoreKeeper">Store Keeper</option>
+    </select>
+    <button onclick="login()">Sign In</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="appPage" class="hidden">
+    <header>
+        <h3>📦 Commodities System</h3>
+        <div>
+            <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+            <button class="toggle-btn" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <nav id="menu"></nav>
+
+    <div class="container">
+        <div id="dashboard" class="hidden">
+            <h2>Manager Dashboard</h2>
+            <div class="card">📊 Total Products: 120</div>
+            <div class="card">⚠️ Low Stock Items: 8</div>
+            <div class="card">💰 Daily Sales: ₹25,000</div>
+        </div>
+
+        <div id="products" class="hidden">
+            <h2>Products</h2>
+            <div class="card">Rice - 50kg</div>
+            <div class="card">Wheat - 40kg</div>
+            <div class="card">Sugar - 30kg</div>
+
+            <h3>Add / Edit Product</h3>
+            <input placeholder="Product Name">
+            <input placeholder="Quantity">
+            <button>Add Product</button>
+        </div>
+    </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
